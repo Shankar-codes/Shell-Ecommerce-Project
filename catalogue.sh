@@ -81,7 +81,7 @@ VALIDATE $? "Install mongodb client"
 
 INDEX=$(mongosh mongodb.ellamma.fun --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')")
 if [ $INDEX -le 0 ]; then
-    mongosh --host $MONGODB_HOST </app/db/master-data.js &>>$LOG_FILE
+    mongosh --host $MONGODB_HOST </app/db/master-data.js &>>$LOGS_FILE
     VALIDATE $? "Load catalogue products"
 else
     echo -e "Catalogue products already loaded ... $Y SKIPPING $N"
