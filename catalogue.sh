@@ -13,7 +13,8 @@ SCRIPT_FILE=$(echo $0 | cut -d "." -f1)
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_FILE.log"
 MONGODB_HOST="mongodb.ellamma.fun"
 
-mkdir -p LOGS_FOLDER
+mkdir -p $LOGS_FOLDER
+echo "Script execution started $(date)"
 
 if [ $USERID -ne 0 ]; then
 	echo "Please login to root user to execute the script"
