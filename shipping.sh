@@ -42,7 +42,7 @@ else
     echo -e "User already exists... $Y SKIPPING $N"
 fi
 
-mkdir /app &>>LOGS_FILE
+mkdir -p /app &>>LOGS_FILE
 VALIDATE $? "Creating app directory"
 
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping-v3.zip &>>LOGS_FILE
