@@ -12,6 +12,7 @@ LOGS_FOLDER="/var/log/Shell-Ecommerce-Project"
 SCRIPT_FILE=$(echo $0 | cut -d "." -f1)
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_FILE.log"
 MONGODB_HOST="mongodb.ellamma.fun"
+SCRIPT_DIR=$PWD
 
 mkdir -p $LOGS_FOLDER
 echo "Script execution started $(date)"
@@ -65,7 +66,7 @@ VALIDATE $? "Unzipping the Catalogue artifact"
 npm install &>>LOGS_FILE
 VALIDATE $? "Installing the Dependencies"
 
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp $SCRIPT_DIR/catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? "Copy systemctl service"
 
 systemctl daemon-reload
