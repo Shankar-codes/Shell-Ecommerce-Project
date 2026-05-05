@@ -65,7 +65,7 @@ VALIDATE $? "Unzipping the Catalogue artifact"
 npm install &>>LOGS_FILE
 VALIDATE $? "Installing the Dependencies"
 
-cp catalogue.service /etc/systemd/system/
+cp catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? "Copy systemctl service"
 
 systemctl daemon-reload
