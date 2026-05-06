@@ -1,6 +1,6 @@
 # 🛒 Shell Ecommerce Project
 
-A fully automated, shell-scripted deployment of the **RoboShop** ecommerce application on AWS EC2. This project provisions infrastructure and configures each microservice using Bash scripts, with systemd integration for process management.
+A fully automated, shell-scripted deployment of the **ELLAMMA** ecommerce application on AWS EC2. This project provisions infrastructure and configures each microservice using Bash scripts, with systemd integration for process management.
 
 ---
 
